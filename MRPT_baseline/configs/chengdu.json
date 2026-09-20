@@ -1,0 +1,22 @@
+{
+  "city": "chengdu",
+  "node_file": "E:/VTRQ_baseline/chengdu_nodes.txt",
+  "edge_file": "E:/VTRQ_baseline/chengdu_edges.txt",
+  "trajectory_globs": [
+    "E:/Graph-Diffusion-Planning-main/chengdu-tra-json/traj-10-*.json",
+    "E:/Graph-Diffusion-Planning-main/chengdu-tra-json/traj-11-*.json"
+  ],
+  "theta": 64,
+  "index_file": "../index_output/chengdu_baseline_index.dat",
+  "catalog_file": "../catalog_output/chengdu_baseline_catalog.dat",
+  "trusted_root_file": "../trusted_root/chengdu_root.txt",
+  "benchmark": {
+    "center_lon" :104.12,
+    "center_lat": 30.71,
+
+    "base_query_start": 1543352000,
+    "repeats": 30,
+    "warmup_repeats": 1,
+    "output_dir": "../hot_benchmark_output/chengdu_baseline"
+  }
+}

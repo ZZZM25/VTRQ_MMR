@@ -1,0 +1,20 @@
+{
+  "city": "xian",
+  "node_file": "E:/VTRQ_baseline/xian_nodes.txt",
+  "edge_file": "E:/VTRQ_baseline/xian_edges.txt",
+  "trajectory_globs": [
+    "E:/Graph-Diffusion-Planning-main/loader/preprocess/mm/sets_data/real2/trajectories/*.json"
+  ],
+  "theta": 64,
+  "index_file": "../index_output/xian_baseline_index.dat",
+  "catalog_file": "../catalog_output/xian_baseline_catalog.dat",
+  "trusted_root_file": "../trusted_root/xian_root.txt",
+  "benchmark": {
+    "center_lon": 108.95,
+  "center_lat": 34.265,
+  "base_query_start": 1540544368,
+  "repeats": 30,
+  "warmup_repeats": 1,
+  "output_dir": "../hot_benchmark_output/xian_baseline"
+}
+}

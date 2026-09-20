@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "city": "beijing",
+  "trajectory_count": 31390,
+  "point_count": 25368080,
+  "bounds": [
+    116.269197,
+    39.8444321,
+    116.509276,
+    40.024117
+  ],
+  "points_file": "points.natural.bin",
+  "prefix_file": "trajectory_prefix_points.bin",
+  "point_record_size": 64,
+  "beijing_subdivisions": 10,
+  "catalog": "E:\\rtree_baseline\\gps_rtree_baseline_project\\catalogs\\beijing_trajectory_plaintext.csv",
+  "semantics": {
+    "chengdu_xian": "raw original trajectory[2] GPS points only; road edges are not indexed or queried",
+    "beijing": "each adjacent [node_id,lon,lat,timestamp] source pair linearly split into 10 segments by default; N -> 10*(N-1)+1 indexed points",
+    "rtree": "2D longitude/latitude R-tree; timestamp stored only in leaf point entry and checked only after spatial leaf hit"
+  }
+}

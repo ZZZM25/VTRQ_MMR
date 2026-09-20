@@ -1,0 +1,13 @@
+{
+  "input": "data/chengdu",
+  "legacy_sidecar": null,
+  "plaintext_catalog": "catalogs/chengdu_trajectory_plaintext.csv",
+  "index_file": "indexes/chengdu_three_mbt.pkl",
+  "query_output_dir": "benchmark_output_chengdu_three_mbt",
+  "scaling_output_dir": "index_scaling_output/three_mbt/chengdu",
+  "update_output_dir": "index_update_output/three_mbt/chengdu",
+  "leaf_capacity": 128,
+  "fanout": 64,
+  "formal_repeats": 1,
+  "warmup_repeats": 0
+}

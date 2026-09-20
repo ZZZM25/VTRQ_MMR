@@ -1,0 +1,14 @@
+{
+  "input": "data/beijing_trajectories.csv",
+  "legacy_sidecar": null,
+  "plaintext_catalog": "catalogs/beijing_trajectory_plaintext.csv",
+  "index_file": "indexes/beijing_three_mbt.pkl",
+  "query_output_dir": "benchmark_output_beijing_three_mbt",
+  "scaling_output_dir": "index_scaling_output/three_mbt/beijing",
+  "update_output_dir": "index_update_output/three_mbt/beijing",
+  "beijing_subdivisions": 10,
+  "leaf_capacity": 128,
+  "fanout": 64,
+  "formal_repeats": 1,
+  "warmup_repeats": 0
+}

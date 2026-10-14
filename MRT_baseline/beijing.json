@@ -1,0 +1,15 @@
+{
+  "input": "data/beijing_trajectories.csv",
+  "prepared_dir": "prepared/beijing",
+  "plaintext_catalog": "catalogs/beijing_trajectory_plaintext.csv",
+  "index_dir": "indexes/beijing_gps_rtree",
+  "query_output_dir": "benchmark_output_beijing_gps_rtree",
+  "scaling_output_dir": "index_scaling_output/gps_rtree/beijing",
+  "update_output_dir": "index_update_output/gps_rtree/beijing",
+  "leaf_capacity": 128,
+  "fanout": 64,
+  "sort_chunk_rows": 500000,
+  "formal_repeats": 1,
+  "warmup_repeats": 0,
+  "beijing_subdivisions": 10
+}

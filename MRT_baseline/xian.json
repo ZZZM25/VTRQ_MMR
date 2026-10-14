@@ -1,0 +1,15 @@
+{
+  "input": "data/xian",
+  "prepared_dir": "prepared/xian",
+  "plaintext_catalog": "catalogs/xian_trajectory_plaintext.csv",
+  "index_dir": "indexes/xian_gps_rtree",
+  "query_output_dir": "benchmark_output_xian_gps_rtree",
+  "scaling_output_dir": "index_scaling_output/gps_rtree/xian",
+  "update_output_dir": "index_update_output/gps_rtree/xian",
+  "leaf_capacity": 128,
+  "fanout": 64,
+  "sort_chunk_rows": 500000,
+  "formal_repeats": 10,
+  "warmup_repeats": 0,
+  "beijing_subdivisions": 10
+}

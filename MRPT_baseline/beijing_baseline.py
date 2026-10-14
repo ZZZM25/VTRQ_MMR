@@ -413,7 +413,13 @@ def build_index() -> None:
     edge_roots, edge_hashes, suffix_states = build_edge_commitments(
         road, store
     )
-    tree = BinarySpatialTreeBuilder(road, THETA).build()
+    print("Spatial partition weight: distinct trajectory count per edge")
+    edge_trajectory_counts = store.unique_trajectory_counts()
+    tree = BinarySpatialTreeBuilder(
+        road,
+        THETA,
+        edge_trajectory_counts=edge_trajectory_counts,
+    ).build()
     root = authenticate_spatial_tree(tree, edge_hashes)
 
     post_insert_index_time = perf_counter() - t0

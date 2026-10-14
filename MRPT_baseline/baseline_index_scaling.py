@@ -1028,9 +1028,11 @@ def run_worker(
         store,
     )
 
+    print("Spatial partition weight: distinct trajectory count per edge")
     tree = BinarySpatialTreeBuilder(
         road,
         theta,
+        edge_trajectory_counts=store.unique_trajectory_counts(),
     ).build()
 
     root = authenticate_spatial_tree(

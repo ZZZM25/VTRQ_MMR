@@ -34,7 +34,7 @@ def main():
     for path,st,en,segs in specs:
         tid=compute_trajectory_id(path,st,en); c.add(tid,segs)
         for eid,seg in zip(path,segs): s.insert_by_start(eid,tid,seg.start_time,seg.end_time)
-    s.validate_start_order(); er,eh,ss=build_edge_commitments(r,s); tree=BinarySpatialTreeBuilder(r,theta=2).build(); root=authenticate_spatial_tree(tree,eh); idx=BaselineIndex(r,s,tree,er,eh,ss,root,2,())
+    s.validate_start_order(); er,eh,ss=build_edge_commitments(r,s); tree=BinarySpatialTreeBuilder(r,theta=2,edge_trajectory_counts=s.unique_trajectory_counts()).build(); root=authenticate_spatial_tree(tree,eh); idx=BaselineIndex(r,s,tree,er,eh,ss,root,2,())
     q=(-0.1,-0.1,1.1,0.6,14,22); resp=BaselineServerQuery(idx,*q).build(); rep=verify_vo(resp.vo,r,root,*q,resp.candidate_ids); final=fine_filter_candidates(rep.candidate_ids,c,r,*q)
     assert rep.success and final
     print("SELF TEST PASS",len(resp.candidate_ids),len(resp.vo.verification_set),root.hex())

@@ -44,7 +44,13 @@ def main():
     # authenticated reverse hash-chain commitment.
     edge_roots, edge_hashes, suffix_states = build_edge_commitments(road, store)
 
-    tree = BinarySpatialTreeBuilder(road, int(cfg.get("theta", 64))).build()
+    print("Spatial partition weight: distinct trajectory count per edge")
+    edge_trajectory_counts = store.unique_trajectory_counts()
+    tree = BinarySpatialTreeBuilder(
+        road,
+        int(cfg.get("theta", 64)),
+        edge_trajectory_counts=edge_trajectory_counts,
+    ).build()
     root = authenticate_spatial_tree(tree, edge_hashes)
     post_insert_index_time = perf_counter() - t0
     index_time = ordered_insert_time + post_insert_index_time
